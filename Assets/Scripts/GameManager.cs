@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Unity_2DRoguelike;
 
 public class GameManager : MonoBehaviour
 {

@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BoardManager.fs" />
     <Compile Include="Assets\Scripts\SoundManager.fs" />
     <Compile Include="Assets\Scripts\Wall.fs" />
   </ItemGroup>
@@ -23,7 +24,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(TargetDir)$(ProjectName).dll&quot; &quot;$(SolutionDir)Assets\&quot;&#xD;&#xA;xcopy &quot;$(TargetDir)FSharp.Core.dll&quot; &quot;$(SolutionDir)Assets\&quot;&#xD;&#xA;" />
+    <Exec Command="xcopy /Y &quot;$(TargetDir)$(ProjectName).dll&quot; &quot;$(SolutionDir)Assets\&quot;&#xD;&#xA;xcopy /Y &quot;$(TargetDir)FSharp.Core.dll&quot; &quot;$(SolutionDir)Assets\&quot;&#xD;&#xA;" />
   </Target>
 
 </Project>
