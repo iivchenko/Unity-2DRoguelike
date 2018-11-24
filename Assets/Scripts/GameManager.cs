@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
         foreach(var enemy in enemies)
         {
             enemy.MoveEnemy();
-            yield return new WaitForSeconds(enemy.moveTime);
+            yield return new WaitForSeconds(enemy._moveTime);
         }
 
         playersTurn = true;

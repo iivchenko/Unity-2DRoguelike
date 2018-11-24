@@ -16,7 +16,7 @@ public class Enemy : MovingObject
         animator = GetComponent<Animator>();
     }
 
-    protected override void Start()
+    public override void Start()
     {
         base.Start();
 
@@ -24,7 +24,7 @@ public class Enemy : MovingObject
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    protected override void AttemptMove<T>(int xDir, int yDir)
+    public override void AttemptMove<T>(int xDir, int yDir)
     {
         if (skipMove)
         {
@@ -54,7 +54,7 @@ public class Enemy : MovingObject
         AttemptMove<Player>(xDir, yDir);
     }
 
-    protected override void OnCantMove<T>(T component)
+    public override void OnCantMove<T>(T component)
     {
         var hitPlayer = component as Player;
 

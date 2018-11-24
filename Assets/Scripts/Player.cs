@@ -23,7 +23,7 @@ public class Player : MovingObject
     private int food;
     private Vector2 touchOrigin = -Vector2.one;
 
-    protected override void Start()
+    public override void Start()
     {
         base.Start();
 
@@ -131,7 +131,7 @@ public class Player : MovingObject
         }
     }
 
-    protected override void AttemptMove<T>(int xDir, int yDir)
+    public override void AttemptMove<T>(int xDir, int yDir)
     {
         food--;
 
@@ -139,9 +139,9 @@ public class Player : MovingObject
 
         base.AttemptMove<T>(xDir, yDir);
 
-        RaycastHit2D hit;
+        var hit = Move(xDir, yDir);
 
-        if (Move(xDir, yDir, out hit))
+        if (hit != null)
         {
             SoundManager.Instance.RandomizeSfx(moveSound1, moveSound2);
         }
@@ -151,8 +151,8 @@ public class Player : MovingObject
         GameManager.Instance.playersTurn = false;
     }
 
-    protected override void OnCantMove<T>(T component)
-    {
+    public override void OnCantMove<T>(T component)
+    {        
         Wall hitWall = component as Wall;
 
         hitWall.DamageWall(wallDamage);
