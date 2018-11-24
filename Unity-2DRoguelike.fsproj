@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <RootNamespace>Unity_2DRoguelike</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Assets\Scripts\SoundManager.fs" />
+    <Compile Include="Assets\Scripts\Wall.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>c:\Program Files\Unity\Hub\Editor\2018.2.16f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2018.2.16f1\Editor\Data\PlaybackEngines\MetroSupport\Tools\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroSupport/Managed/il2cpp/UnityEngine.AudioModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2018.2.16f1\Editor\Data\PlaybackEngines\MetroSupport/Managed/il2cpp/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)$(ProjectName).dll&quot; &quot;$(SolutionDir)Assets\&quot;&#xD;&#xA;xcopy &quot;$(TargetDir)FSharp.Core.dll&quot; &quot;$(SolutionDir)Assets\&quot;&#xD;&#xA;" />
+  </Target>
+
+</Project>

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity_2DRoguelike;
+using UnityEngine;
 
 public class Enemy : MovingObject
 {

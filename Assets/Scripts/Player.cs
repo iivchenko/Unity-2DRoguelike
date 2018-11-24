@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity_2DRoguelike;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -125,7 +126,7 @@ public class Player : MovingObject
         if (food < 1)
         {
             SoundManager.Instance.PlaySingl(gameOverSound);
-            SoundManager.Instance.musicSource.Stop();
+            SoundManager.Instance._musicSource.Stop();
             GameManager.Instance.GameOver();
         }
     }
