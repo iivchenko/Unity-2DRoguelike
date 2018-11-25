@@ -5,6 +5,7 @@ open System.Collections
 open System.Collections.Generic
 
 [<AbstractClass>]
+[<AllowNullLiteral>]
 type MovingObject =
     inherit MonoBehaviour
 
@@ -74,4 +75,4 @@ type MovingObject =
             if can = false && hitComponent <> null 
                 then this.OnCantMove(hitComponent)
 
-    abstract member OnCantMove<'a when 'a :> Component> : 'a -> unit
+    abstract member OnCantMove : Component -> unit

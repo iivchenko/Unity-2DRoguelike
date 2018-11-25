@@ -6,10 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Assets\Scripts\SoundManager.fs" />
+    <Compile Include="Assets\Scripts\Wall.fs" />    
     <Compile Include="Assets\Scripts\MovingObject.fs" />
     <Compile Include="Assets\Scripts\BoardManager.fs" />
-    <Compile Include="Assets\Scripts\SoundManager.fs" />
-    <Compile Include="Assets\Scripts\Wall.fs" />
+    <Compile Include="Assets\Scripts\GameManager.fs" />    
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +25,15 @@
     </Reference>
     <Reference Include="UnityEngine.Physics2DModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.16f1/Editor/Data/PlaybackEngines/MetroSupport/Tools/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.16f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.16f1/Editor/Data/PlaybackEngines/MetroSupport/Tools/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.16f1/Editor/Data/PlaybackEngines/MetroSupport/Tools/UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
   </ItemGroup>
 

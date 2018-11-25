@@ -2,7 +2,7 @@
 
 open UnityEngine
 
-type Wall =
+type [<AllowNullLiteral>] Wall =
     inherit MonoBehaviour
 
     val mutable public _hp : int
